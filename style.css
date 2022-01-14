@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: blue;
+    --text-color: #fff;
+}
+
+
+/* common css style */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 7%;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav li {
+    list-style-type: none;
+    margin-right: .7em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    background: orangered;
+    padding: 5px 20px;
+    display: inline-block;
+}
+
+nav li a:hover {
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .2);
+}
+
+.dropdown {
+    position: absolute;
+    opacity: 0;
+    transition: all .2s cubic-bezier(1, 1, 0, 0);
+}
+
+.dropdown>ul>li>a {
+    background: blue;
+}
+
+nav>ul>li:hover .dropdown {
+    opacity: 1;
+}
+
+nav>ul>li:hover .dropdown.mega-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
